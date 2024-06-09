@@ -1,0 +1,32 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+
+        {
+            "Sid": "GlueScriptPermissions",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::htc-poc-usecase2-618580-s3bucket/glue-script/*"
+            ]
+        },
+
+        {
+            "Sid": "OrderProcessing",
+            "Effect": "Allow",
+            "Action": [
+                "logs:*",
+                "cloudwatch:*",
+                "s3:*",
+                "ec2:*",
+                "glue:*",
+                "lambda:*",
+                "sns:*"
+                
+            ],
+            "Resource": "*"
+        }
+    ]
+}
